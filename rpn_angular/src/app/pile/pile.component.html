@@ -1,0 +1,26 @@
+<div class="container">  
+    
+    <h1> RPN Calculator </h1>  
+      
+    <form [formGroup]="rpnForm" (ngSubmit)="onSubmit()">  
+        
+      <p>  
+        <label for="name">Nouveau element: </label>  
+        <input type="number" id="stack" name="stack" formControlName="stack" class="form-control">  <button type="button" class="btn btn-success" (click)="onSubmit()">Ajouter à la pile</button> 
+      </p> 
+
+      <button type="button" class="btn btn-success"(click)="operate('add')">Addition +</button> 
+      <button type="button" class="btn btn-success" (click)="operate('sub')">substitution -</button> 
+      <button type="button" class="btn btn-success" (click)="operate('mul')">Multiplication *</button>
+      <button type="button" class="btn btn-success" (click)="operate('div')">Division /</button> 
+<br>
+<p>{{this.message}}</p>
+<p>La pile {{this.stackList}}</p>
+       <p> <button type="buton" class="btn btn-success" (click)="empty()">Vider la pile</button> </p>
+      
+        
+    </form>  
+        
+    <br/>  
+ 
+  </div> 
